@@ -31,7 +31,18 @@ urlpatterns = [
         ImportAnomalyListCreateView.as_view()
     ),
     path(
-    "import-expenses/",
-    ImportExpenseView.as_view()
-),
+        "import-expenses/",
+        ImportExpenseView.as_view(),
+        name="import-expenses"
+    ),
+    path(
+        "balances/",
+        BalanceCalculationView.as_view(),
+        name="balances"
+    ),
+    path(
+        "recommended-settlements/",
+        RecommendedSettlementView.as_view(),
+        name="recommended-settlements"
+    ),
 ]
